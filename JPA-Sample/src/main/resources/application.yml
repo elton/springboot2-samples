@@ -1,0 +1,23 @@
+# Datasource Configuration
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create # create 创建前先drop表， update不会drop表
+
+# Logger Configuration
+logging:
+  level:
+    ink.pwr.jpasample: debug
+    org.springframework.security:
+      - debug
+      - info
+    org.springframework.web: error
+    org.hibernate.SQL: debug
+    org.hibernate.engine.QueryParameters: debug
+    org.hibernate.engine.query.HQLQueryPlan: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace

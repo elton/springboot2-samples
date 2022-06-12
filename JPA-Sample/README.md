@@ -1,0 +1,1 @@
+# A Sample for JPA with Spring Boot
